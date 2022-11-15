@@ -29,9 +29,9 @@ export class AppService {
     return get_analytics;
   }
 
-  async createUsertest(createUserRequest: CreateUserDto) {
+  async userCreated(createUserRequest: CreateUserDto) {
       // const user_created =  this.analyticsClient.send<any>({ cmd: 'get_analytics' }, createUserRequest).subscribe((result) => console.log(JSON.stringify(result)))
-      var get_analytics = await this.analyticsClient.send<any>({ cmd: 'user_createdtest' }, createUserRequest).toPromise();
+      var get_analytics = await this.analyticsClient.send<any>({ cmd: 'userCreated' }, createUserRequest).toPromise();
       return get_analytics;
   }
 }

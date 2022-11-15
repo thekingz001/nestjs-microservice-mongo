@@ -21,8 +21,8 @@ export class AppController {
     return this.appService.getAnalytics();
   }
 
-  @Post('createUsertest')
-  async createUsertest(@Body() createUserDto: CreateUserDto) {
-    return this.appService.createUsertest(createUserDto);
+  @Post('userCreated')
+  async userCreated(@Body() createUserDto: CreateUserDto) {
+    return this.appService.userCreated(createUserDto);
   }
 }

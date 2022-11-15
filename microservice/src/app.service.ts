@@ -6,7 +6,9 @@ import { Users, UsersDocument } from './Schems_test/users.schema';
 
 @Injectable()
 export class AppService {
-  constructor(@InjectModel(Users.name) private usersModel: Model<UsersDocument>) {}
+  constructor(
+    @InjectModel(Users.name) private usersModel: Model<UsersDocument>,
+  ) {}
   private readonly analytics: any[] = [];
 
   getHello(): string {
@@ -38,5 +40,4 @@ export class AppService {
       password: data.username,
     });
   }
-
 }
