@@ -8,9 +8,7 @@ import { Users, UsersSchema } from './Schems_test/users.schema';
 
 @Module({
   imports: [
-    ConfigModule.forRoot({
-    isGlobal: true,
-    envFilePath: '.env',
+    ConfigModule.forRoot({isGlobal: true, envFilePath: '.env',
     load: [configuration],
     }),
     MongooseModule.forRoot( `${process.env.MONGO_URL}`), 

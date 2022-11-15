@@ -21,10 +21,10 @@ export class AppService {
     // });
     const test = this.usersModel.create({
       username: data.username,
-      password: data.username
+      password: data.username,
     });
-    console.log("Event adding Data");
-    return test ;
+    console.log('Event adding Data');
+    return test;
   }
 
   getAnalytics() {
@@ -32,17 +32,10 @@ export class AppService {
     return this.usersModel.find();
   }
 
-  user_createdtest(data: any) {
-    // return this.analytics;
-    console.log('to this');
-    // return this.analytics.push({
-    //   username: data.username,
-    //   password: data.username,
-    //   timestamp: new Date(),
-    // });
+  userCreated(data: any) {
     return this.usersModel.create({
       username: data.username,
-      password: data.username
+      password: data.username,
     });
   }
 

@@ -23,8 +23,8 @@ export class AppController {
     return this.appService.getAnalytics();
   }
 
-  @MessagePattern({ cmd: 'user_createdtest' })
-  async user_createdtest(data: any) {
-    return this.appService.user_createdtest(data);
+  @MessagePattern({ cmd: 'userCreated' })
+  async userCreated(data: any) {
+    return this.appService.userCreated(data);
   }
 }
